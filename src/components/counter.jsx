@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  //binding event handlers to this:
+  // Binding event handlers to 'this':
+  // →
+  // By using a constructor like below:
   // constructor() {
   //   super();
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
-  //or by using arrow function:
+  // →
+  // Or by using arrow function:
   // handleIncrement = () => {
   //   console.log("Increment Clicked ", this);
   // };
 
-  // This phase is called after a component is updated. Which means we have new states or new props. Here we can compare old against new
+  // This phase is called after a component is updated. Which means we have new states or new props, so we can compare old against new
   // In this phase, we can decide to make an Ajax call to the server by comparing old props or states against new ones.
   componentDidUpdate(prevProps, prevState) {
     console.log("prevProps", prevProps);
